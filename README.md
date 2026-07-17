@@ -17,12 +17,12 @@ Team Lead & Power Management Engineer, six-person capstone team.
 
 ### PCB Design & Manufacturing
 Four boards, one semester, full schematic-to-bring-up flow.
-→ [More detail](pcb-design-coursework/)
+→ [More details](pcb-design-coursework/)
 
 ### Power Electronics & Photovoltaics
 DC-DC and DC-AC power conversion, LTSpice-validated.
-→ [More detail](power-electronics-lab/)
+→ [More details](power-electronics-lab/)
 
 ### APEX — Avionics Protocol Embedded eXperiment
 Multi-protocol embedded sensor fusion node on ESP32. *(personal project)*
-→ [More detail](#)
+→ [More details](#)
