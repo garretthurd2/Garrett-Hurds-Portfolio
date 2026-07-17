@@ -13,7 +13,7 @@ Engineer Intern (EI) — NCEES Electrical & Computer FE — ID 24-130-42
 
 ### Adaptive Fishing Rod Controller
 Team Lead & Power Management Engineer, six-person capstone team.
-→ [More detail](capstone-fishing-rod-controller/)
+→ [More details](capstone-fishing-rod-controller/)
 
 ### PCB Design & Manufacturing
 Four boards, one semester, full schematic-to-bring-up flow.
