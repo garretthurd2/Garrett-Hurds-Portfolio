@@ -6,9 +6,11 @@ I'm an electrical engineer bridging two worlds: professional MEP design by day, 
 Designing electronic hardware has been a career goal of mine since I first took circuit classes in college. I enjoyed those classes not because it came easy, but because I genuinely loved the process of designing and troubleshooting circuits. This led to a passion for electronic circuits, for designing the PCBs that bring them to life, and for the embedded systems that connect everything together. Above all, I just love solving complex problems. Figuring out why a board doesn't work the first time is half the fun...
 
 **B.S. Electrical Engineering** — University of Colorado Boulder, 2025
+
 **Engineering Intern License** - NCEES  Electrical and Computer Fundamentals of Engineering Exam
 
 Located in Denver, CO
+
 Eligible for U.S. security clearance.
 
 ## Projects
