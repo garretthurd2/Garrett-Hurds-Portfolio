@@ -1,13 +1,15 @@
-# Garrett Hurd — Hardware & PCB Design Portfolio
+# Garrett Hurd, EI —  Electronic Hardware Design Portfolio
 
-Electrical engineer with hands-on PCB design experience and a strong foundation in power electronics, analog circuit design, and microelectronics. I take hardware from concept to working prototype — four PCBs designed and fabricated, from discrete analog circuits to an ATmega328 microcontroller system, plus a six-person team led to deliver a 24V motor control system under client deadlines.
+I'm an electrical engineer bridging two worlds: professional MEP design by day, hands-on PCB, power electronics, and embedded projects by night. This portfolio is that second half.
 
-Currently one year into professional MEP electrical design, delivering NEC-compliant, permit-ready electrical distribution systems. Eligible for U.S. Secret security clearance.
-
-## Education
+## About Me
+Designing electronic hardware has been a career goal of mine since I first took circuit classes in college. I enjoyed those classes not because it came easy, but because I genuinely loved the process of designing and troubleshooting circuits. This led to a passion for electronic circuits, for designing the PCBs that bring them to life, and for the embedded systems that connect everything together. Above all, I just love solving complex problems. Figuring out why a board doesn't work the first time is half the fun...
 
 **B.S. Electrical Engineering** — University of Colorado Boulder, 2025
-Engineer Intern (EI) — NCEES Electrical & Computer FE — ID 24-130-42
+**Engineering Intern License** - NCEES  Electrical and Computer Fundamentals of Engineering Exam
+
+Located in Denver, CO
+Eligible for U.S. security clearance.
 
 ## Projects
 
@@ -23,6 +25,10 @@ Four boards, one semester, full schematic-to-bring-up flow.
 DC-DC and DC-AC power conversion, LTSpice-validated.
 → [More details](power-electronics-lab/)
 
-### APEX — Avionics Protocol Embedded eXperiment
+### APEX — Avionics Protocol Embedded eXperiment (In active development)
 Multi-protocol embedded sensor fusion node on ESP32. *(personal project)*
+→ [More details](#)
+
+### Personal Homelab for local AI & Electronics Development (In active development)
+Implementing a two-machine Linux-based development ecosystem to serve as my primary platform for AI, electronics, and networking projects.
 → [More details](#)
