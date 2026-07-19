@@ -9,7 +9,7 @@ Designing electronic hardware has been a career goal of mine since I first took 
 
 **Engineering Intern License** - NCEES  Electrical and Computer Fundamentals of Engineering Exam
 
-Located in Denver, CO
+Located in **Denver, CO**
 
 Eligible for U.S. security clearance.
 
