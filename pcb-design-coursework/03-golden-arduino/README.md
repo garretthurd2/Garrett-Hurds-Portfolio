@@ -1,102 +1,59 @@
-# 03 — Golden Arduino
+# Board 3 — Golden Arduino (Custom ATmega328 Board)
 
-*ECEN 3730 — Garrett Hurd*
+**Course:** ECEN 3730 – PCB Design, University of Colorado Boulder
 
-## Introduction
+## Overview
 
-The purpose of Board 3 is to design, build, and bootload my own Arduino board using the ATmega328 — called a Golden Arduino — and compare it to a commercial Arduino board. To see which board is better, I analyzed the switching noise on a commercial Arduino using a switching noise shield, then did the same analysis on my Golden Arduino.
+Designed, built, and bootloaded a custom Arduino-equivalent board (a "Golden Arduino") around a bare ATmega328, then benchmarked its switching noise and rise/fall times directly against a commercial Arduino board using a shared switching-noise test shield.
 
-Before the analysis, here's the design process. Below is the block diagram and schematic for my Golden Arduino — I used resources online as an outline for this design.
+## What Was Done
 
-**Fig. 1: Block Diagram for Board 3**
-![Block diagram](images/01-block-diagram.jpg)
+- Designed the schematic and PCB layout for a full custom ATmega328 board, including USB-to-UART (CH340G) and a 12 MHz crystal oscillator
+- Fabricated, assembled, and bootloaded the board
+- Debugged an initial USB communication failure: traced it past the USB routing and crystal oscillator (swapped, no fix) to a faulty CH340G chip — replacing the CH340G resolved it
+- Connected a switching-noise test shield to both the commercial Arduino and the Golden Arduino and ran identical test code on each
+- Measured rise/fall times at quietLOW, quietHIGH, and the 5V rail, with and without a noise "slammer" load, on both boards
 
-**Fig. 2: Schematic for Board 3**
-![Schematic](images/02-schematic.png)
+## Key Results
 
-When designing the PCB, I wanted to give myself as much room as possible. There are a lot of components on this board, and a lot of routing needed for the ATmega and the USB-to-UART. The extra space helped with routing and component placement.
-
-**Fig. 3: Layout for Board 3**
-![PCB layout](images/03-pcb-layout.png)
-
-**Fig. 4: Powered up Board 3**
-![Board powered up](images/04-powered-up.jpg)
-
-Figure 4 shows my Golden Arduino powered up, bootloaded, and running the code given for the comparison. I didn't have any issues bootloading the board — but I did have an issue communicating with my computer initially. At first I thought it was how I'd routed the USB port to the CH340G, but that wasn't it. I noticed the 12MHz crystal oscillator wasn't oscillating at all, so I replaced it — same issue. Finally, I replaced the CH340G chip and connected the board again, and it started working correctly. I was able to upload code, confirmed the board was working, and continued with the analysis.
-
-## Analysis
-
-Now to compare switching noise between a commercial Arduino and my Golden Arduino. I connected the provided switching noise shield to each board and uploaded the provided code.
-
-**Fig. 5: Golden Arduino with switching noise shield**
-![Golden Arduino with shield](images/05-golden-arduino-shield.jpg)
-
-To determine which board is better, I compared switching noise on quietLOW, quietHIGH, and the board's power rail as the ATmega switches states.
-
-**Commercial Arduino scope shots:**
-
-Fig. 6–7: quietLOW rise/fall time and noise
-![quietLOW rise](images/06-commercial-quietlow-rise.png)
-![quietLOW fall](images/07-commercial-quietlow-fall.png)
-
-Fig. 8–9: quietHIGH rise/fall time and noise
-![quietHIGH rise](images/08-commercial-quiethigh-rise.png)
-![quietHIGH fall](images/09-commercial-quiethigh-fall.png)
-
-Fig. 10–11: 5V rail rise/fall time and noise
-![5V rail rise](images/10-commercial-5v-rise.png)
-![5V rail fall](images/11-commercial-5v-fall.png)
-
-Fig. 12–15: quietHIGH and 5V rail rise/fall with slammer
-![quietHIGH rise w/ slammer](images/12-commercial-quiethigh-rise-slammer.png)
-![quietHIGH fall w/ slammer](images/13-commercial-quiethigh-fall-slammer.png)
-![5V rail rise w/ slammer](images/14-commercial-5v-rise-slammer.png)
-![5V rail fall w/ slammer](images/15-commercial-5v-fall-slammer.png)
-
-**My Golden Arduino scope shots:**
-
-Fig. 16–17: quietLOW rise/fall time and noise
-![quietLOW rise](images/16-golden-quietlow-rise.png)
-![quietLOW fall](images/17-golden-quietlow-fall.png)
-
-Fig. 18–19: quietHIGH rise/fall time and noise
-![quietHIGH rise](images/18-golden-quiethigh-rise.png)
-![quietHIGH fall](images/19-golden-quiethigh-fall.png)
-
-Fig. 20–21: 5V rail rise/fall time and noise
-![5V rail rise](images/20-golden-5v-rise.png)
-![5V rail fall](images/21-golden-5v-fall.png)
-
-Fig. 22–25: quietHIGH and 5V rail rise/fall with slammer
-![quietHIGH rise w/ slammer](images/22-golden-quiethigh-rise-slammer.png)
-![quietHIGH fall w/ slammer](images/23-golden-quiethigh-fall-slammer.png)
-![5V rail rise w/ slammer](images/24-golden-5v-rise-slammer.png)
-![5V rail fall w/ slammer](images/25-golden-5v-fall-slammer.png)
-
-| Rise and Fall Times | Commercial Arduino | Golden Arduino | Comparison |
+| Rise/Fall Metric | Commercial | Golden Arduino | Ratio (Golden ÷ Commercial) |
 |---|---|---|---|
-| quietLOW Rise | 4.842 ns | 5.023 ns | 1.03x worse |
-| quietLOW Fall | 4.276 ns | 4.862 ns | 1.13x worse |
-| quietHIGH Rise | 5.085 ns | 5.117 ns | 1x worse |
-| quietHIGH Fall | 4.245 ns | 4.928 ns | 1.16x worse |
-| 5V Rail Rise | 4.925 ns | 4.550 ns | 0.92x worse |
-| 5V Rail Fall | 4.349 ns | 5.115 ns | 1.17x worse |
-| quietHIGH Rise w/ Slammer | 20.723 ns | 20.812 ns | 1x worse |
-| quietHIGH Fall w/ slammer | 7.894 ns | 8.973 ns | 1.13x worse |
-| 5V Rail Rise w/ slammer | 20.723 ns | 22.063 ns | 1.1x worse |
-| 5V Rail Fall w/ slammer | 7.928 ns | 8.980 ns | 1.13x worse |
+| quietLOW Rise | 4.842 ns | 5.023 ns | 1.03× |
+| quietLOW Fall | 4.276 ns | 4.862 ns | 1.13× |
+| quietHIGH Rise | 5.085 ns | 5.117 ns | 1.00× |
+| quietHIGH Fall | 4.245 ns | 4.928 ns | 1.16× |
+| 5V Rail Rise | 4.925 ns | 4.550 ns | 0.92× |
+| 5V Rail Fall | 4.349 ns | 5.115 ns | 1.17× |
+| quietHIGH Rise (w/ slammer) | 20.723 ns | 20.812 ns | 1.00× |
+| quietHIGH Fall (w/ slammer) | 7.894 ns | 8.973 ns | 1.13× |
+| 5V Rail Rise (w/ slammer) | 20.723 ns | 22.063 ns | 1.10× |
+| 5V Rail Fall (w/ slammer) | 7.928 ns | 8.980 ns | 1.13× |
 
-## Conclusion
+The Golden Arduino ran slightly slower than the commercial board on 8 of 10 measurements (roughly 3–17% slower). Noise levels were comparable between the two boards.
 
-Based on the table above, my Golden Arduino design came in slightly worse than a commercial Arduino in switching times. Noise was roughly comparable between the two. This wasn't the outcome I was hoping for — the goal was to beat the commercial board — but it's a genuine learning experience, and I identified specific improvements for future revisions:
+**Note:** the 5V Rail Rise row is the one exception — the Golden Arduino measured *faster* (4.550 ns vs. 4.925 ns, a 0.92× ratio) than the commercial board there. The original write-up's summary table calls this "0.92x worse," which doesn't match the direction of that number — worth a quick correction before this goes in the portfolio.
 
-1. **Board size.** I gave myself as much room as possible to place components and route traces, since I'd never designed a board this complex before. In hindsight, this is likely one of the main reasons the board underperformed.
-2. **Distance between components.** The extra space meant important components sat further apart than on a commercial board — that extra distance likely added trace inductance, which meant more noise and worse performance.
-3. **Decoupling capacitors.** I think I went a bit overboard here. While decoupling caps are good practice, I believe the extra ones I added contributed to more inrush current, adding noise rather than reducing it.
+## Root Cause / What I'd Do Differently
 
-Overall, it was a fun challenge to design, build, and power on my first Golden Arduino — I'm proud to have a functional custom Arduino board of my own design. While performance came in slightly behind a commercial board, I learned a lot about designing complex, high-component-count boards, and used these lessons directly in Board 4.
+Three design decisions were identified as likely contributors to the slower performance:
 
----
+- **Board size:** generous spacing was used throughout (first time designing a board this complex), which likely increased trace lengths and parasitic inductance
+- **Component placement:** key components were placed farther apart than on a commercial layout, adding trace inductance
+- **Decoupling capacitors:** more were added than strictly necessary, which may have increased inrush current and noise rather than reducing it
 
-Previous: [02 — Signal Integrity: Good vs. Bad Design](../02-signal-integrity-good-vs-bad-design/)
-Next: [04 — Golden Arduino V2 + Instrument Droid](../04-golden-arduino-v2-instrument-droid/)
+These findings directly informed the approach on Board 4 and the planned Golden Arduino V2.
+
+## Figures
+
+![Golden Arduino board, powered up and bootloaded](images/01-board-photo.jpeg)
+*Golden Arduino, custom ATmega328 board, powered up and running the comparison test code.*
+
+![Commercial Arduino 5V rail rise time](images/02-commercial-5v-rail-rise.png)
+*Commercial Arduino — 5V rail rise time.*
+
+![Golden Arduino 5V rail rise time](images/03-golden-5v-rail-rise.png)
+*Golden Arduino — 5V rail rise time, the one metric where it outperformed the commercial board.*
+
+## Full Report
+
+Full board report (with Altium schematic/layout and all scope captures) to be added to this folder.
