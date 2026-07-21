@@ -1,6 +1,7 @@
 # PV Panel Characterization
 
 **Course:** ECEN 4517 – Power Electronics Laboratory, University of Colorado Boulder
+
 **Team:** Garrett Hurd, Christian Lopez
 
 ## Overview
