@@ -6,10 +6,10 @@ Four boards, each building directly on lessons from the last — from a first 55
 
 | Board | What it is | Key result |
 |---|---|---|
-| [01 — 555 Timer Astable Oscillator](board-01-555-timer-astable-oscillator) | First board: a 555 timer astable oscillator (~500 Hz, ~50% duty cycle) driving LEDs at three series resistances | Confirmed working at all three test points; one soft routing error noted for next time |
-| [02 — Good vs. Bad Design Practices](board-02-good-vs-bad-design-practices) | Two identical hex-inverter circuits, one built with decoupling caps/short traces/a return plane, one without | Bad-design side ran 1.6–1.7× slower on rise time with visibly more noise on identical circuitry |
-| [03 — Golden Arduino](board-03-golden-arduino) | A custom ATmega328 board benchmarked head-to-head against a commercial Arduino for switching noise and rise/fall time | Ran 3–17% slower on 8 of 10 metrics; root-caused to board size, component spacing, and excess decoupling caps |
-| [04 — Instrument Droid](board-04-instrument-droid) | A 4-layer board pairing a revised Golden Arduino V2 with "Instrument Droid," a DAC/op-amp/MOSFET system that measures a voltage source's Thevenin resistance | Measured 48 Ω on a known 50 Ω source (~4% error); found and fixed a board-killing net-connectivity bug |
+| [01 — 555 Timer Astable Oscillator](01-555-timer-astable-oscillator) | First board: a 555 timer astable oscillator (~500 Hz, ~50% duty cycle) driving LEDs at three series resistances | Confirmed working at all three test points; one soft routing error noted for next time |
+| [02 — Good vs. Bad Design Practices](02-good-vs-bad-design-practices) | Two identical hex-inverter circuits, one built with decoupling caps/short traces/a return plane, one without | Bad-design side ran 1.6–1.7× slower on rise time with visibly more noise on identical circuitry |
+| [03 — Golden Arduino](03-golden-arduino) | A custom ATmega328 board benchmarked head-to-head against a commercial Arduino for switching noise and rise/fall time | Ran 3–17% slower on 8 of 10 metrics; root-caused to board size, component spacing, and excess decoupling caps |
+| [04 — Instrument Droid](04-instrument-droid) | A 4-layer board pairing a revised Golden Arduino V2 with "Instrument Droid," a DAC/op-amp/MOSFET system that measures a voltage source's Thevenin resistance | Measured 48 Ω on a known 50 Ω source (~4% error); found and fixed a board-killing net-connectivity bug |
 
 ## Progression
 
