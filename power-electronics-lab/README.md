@@ -1,30 +1,22 @@
-# Power Electronics & Photovoltaic Lab
+# Power Electronics Lab
 
-*ECEN 4517 — Christian Lopez & Garrett Hurd*
+**Course:** ECEN 4517 – Power Electronics Laboratory, University of Colorado Boulder
+**Team:** Garrett Hurd, Christian Lopez
 
-A complete solar power system built and tested stage by stage: PV panel → Buck MPPT converter → battery → Cascaded Boost converter → DC-AC inverter → AC load. Each stage was designed, simulated, built on a prototyping board, and validated on the bench and in the field.
-
-![System block diagram](images/system-overview.png)
-
-**Tools:** LTSpice · Tektronix oscilloscope · Bode 100 impedance analyzer · soldering iron and a lot of patience
+A four-stage power system built from the ground up: characterizing a PV panel, converting and tracking its peak power into a battery, boosting that battery voltage to a high-voltage DC bus, and inverting that bus to household-outlet-equivalent AC. Each stage below is a standalone write-up — click through for the full breakdown, key results, and figures. Full lab report PDFs are included in each stage folder.
 
 | Stage | What it is | Key result |
 |---|---|---|
-| [01 — PV Panel Characterization](01-pv-panel-characterization/) | I-V curve characterization of the panel under shaded and unshaded conditions, modeled as an equivalent circuit in LTSpice | Model matched measured data to within 1% |
-| [02 — Buck Converter & MPPT](02-buck-converter-mppt/) | Buck converter with battery current/voltage sensing and a duty-cycle-sweep MPPT algorithm | 91% converter efficiency; MPPT found peak power at up to 97% efficiency |
-| [03 — Cascaded Boost Converter](03-cascaded-boost-converter/) | Two-stage boost converter driven by a discrete analog PWM gate driver, stepping the battery voltage to 150V+ | 76% efficiency at full load |
-| [04 — DC-AC Inverter](04-dc-ac-inverter/) | Modified sine-wave inverter converting the high-voltage DC bus to household-outlet AC | 119.6 Vrms at 60.28 Hz |
+| [01 — PV Panel Characterization](01-pv-panel-characterization) | I-V characterization of an 85 W panel under shaded and unshaded conditions, modeled as a validated single-diode equivalent circuit in LTSpice | LTSpice model matched measured unshaded power within ~1% |
+| [02 — Buck Converter & MPPT](02-buck-converter-mppt) | 100 kHz buck converter with battery current/voltage sensing and a duty-cycle-sweep MPPT algorithm, field-tested with the PV panel | 91% converter efficiency; MPPT tracked peak power at up to 97.4% efficiency in the field |
+| [03 — Cascaded Boost Converter](03-cascaded-boost-converter) | Two-stage (cascaded) boost converter with a discrete analog PWM gate driver, stepping ~12 V to 150+ V | 76% efficiency at 150 V, full load |
+| [04 — DC-AC Inverter](04-dc-ac-inverter) | Modified sine-wave inverter converting the 150 V DC bus to household-outlet-equivalent AC | 119.6 Vrms at 60.28 Hz |
 
-## Highlight: Buck Converter & MPPT
+## System Overview
 
-The most complete closed-loop system in the lab: a buck converter with onboard current/voltage sensing (accurate to under 1% error) feeding a duty-cycle-sweep MPPT algorithm running in real time on a microcontroller. On the bench, the algorithm reliably found the true maximum power point at 93% efficiency. In unshaded outdoor field testing, it held **97.4% average efficiency**.
+```
+PV Panel → Buck Converter (MPPT) → 12V Battery → Cascaded Boost → 150V DC Bus → Inverter → 120VAC Load
+   [01]              [02]                            [03]                        [04]
+```
 
-Shaded field testing was a different story — output power dropped to a fraction of what the panel's own characterization data predicted it should deliver, with an average "efficiency" reading of 101.8%, a physically impossible number that's really a flag that something in the system wasn't behaving as expected. That discrepancy was never fully resolved; the [stage write-up](02-buck-converter-mppt/) documents the investigation and the leading hypotheses.
-
-## What Four Stages Taught Me
-
-- **Loop inductance shows up as real losses.** Long prototype leads on both the buck and boost stages introduced measurable ringing on switching transitions — visible directly in scope captures, and a likely contributor to efficiency coming in under the target on both converters.
-- **Sensing accuracy has to earn the control loop's trust.** Voltage/current sensing was accurate to under 1% error, but even that small a bias had to be corrected for at high duty cycles to keep the MPPT algorithm converging on the right answer.
-- **Design constraints cascade between stages.** The gate driver's switching frequency was deliberately dropped from a 100kHz design target to 93kHz late in the process, specifically to unlock the higher duty cycle the boost converter needed to hit its output voltage target — a tradeoff made across, not within, a single stage.
-- **Nominal-condition testing doesn't catch everything.** The MPPT algorithm performed well bench-tested and field-tested under normal sun — but shaded field conditions exposed a discrepancy that no amount of unshaded testing would have revealed.
-- **An impossible number is still useful data.** A measured 101.8% efficiency can't be real, but treating it as a bug report rather than a fluke is what turns a broken test into a debugging lead.
+Each stage was designed, built, and bench-tested independently, then integrated and field-tested as a complete system outdoors with the PV panel and battery.
