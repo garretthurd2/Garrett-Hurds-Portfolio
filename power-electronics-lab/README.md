@@ -14,5 +14,5 @@ A four-stage power system built from the ground up: characterizing a PV panel, c
 | [04 — DC-AC Inverter](04-dc-ac-inverter) | Modified sine-wave inverter converting the 150 V DC bus to household-outlet-equivalent AC | 119.6 Vrms at 60.28 Hz |
 
 ## System Overview
-
+(images/System Overview.png)
 Each stage was designed, built, and bench-tested independently, then integrated and field-tested as a complete system outdoors with the PV panel and battery.
