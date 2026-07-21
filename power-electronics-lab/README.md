@@ -16,3 +16,4 @@ A four-stage power system built from the ground up: characterizing a PV panel, c
 ## System Overview
 (images/System Overview.png)
 Each stage was designed, built, and bench-tested independently, then integrated and field-tested as a complete system outdoors with the PV panel and battery.
+<img width="1773" height="891" alt="System Overview" src="https://github.com/user-attachments/assets/549365e0-15fe-4c80-92e3-cce1c3d33499" />
