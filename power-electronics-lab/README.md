@@ -14,9 +14,4 @@ A four-stage power system built from the ground up: characterizing a PV panel, c
 
 ## System Overview
 
-```
-PV Panel → Buck Converter (MPPT) → 12V Battery → Cascaded Boost → 150V DC Bus → Inverter → 120VAC Load
-   [01]              [02]                            [03]                        [04]
-```
-
 Each stage was designed, built, and bench-tested independently, then integrated and field-tested as a complete system outdoors with the PV panel and battery.
