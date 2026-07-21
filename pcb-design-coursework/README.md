@@ -1,26 +1,43 @@
-# PCB Design & Manufacturing Portfolio
+# Board 4 — Instrument Droid (+ Golden Arduino V2)
 
-Four boards designed, fabricated, assembled, and brought up over one semester at CU Boulder — starting with a discrete 555 timer circuit and ending with a custom 4-layer instrumentation board. Full development flow on every board: schematic capture, component selection, layout to fab-house DFM constraints, hand assembly, and bring-up.
+**Course:** ECEN 3730 – PCB Design, University of Colorado Boulder
 
-**Tools:** Altium Designer · LTSpice · soldering iron and a lot of flux
+## Overview
 
-| Board | What it is | Key skill demonstrated |
-|---|---|---|
-| [01 — 555 Timer Astable Oscillator](01-555-timer-astable-oscillator/) | 555 timer driving five LEDs through varying load resistances to validate a ~500Hz, 50% duty cycle square wave | First fab cycle, discrete analog design, test-point-driven validation |
-| [02 — Signal Integrity: Good vs. Bad Design](02-signal-integrity-good-vs-bad-design/) | Identical hex inverter circuit built two ways — with decoupling caps + return plane, and without — to directly measure the effect on rise/fall time and noise | Decoupling, return planes, comparative scope measurement |
-| [03 — Golden Arduino](03-golden-arduino/) | Custom ATmega328 Arduino-compatible board, bootloaded from bare silicon, benchmarked head-to-head against a commercial Arduino for switching noise | ISP bootloading, mixed-signal layout, comparative benchmarking |
-| [04 — Golden Arduino V2 + Instrument Droid](04-golden-arduino-v2-instrument-droid/) | 4-layer board pairing a redesigned Golden Arduino with "Instrument Droid" — a DAC/op-amp/MOSFET system that measures the Thevenin voltage and resistance of an unknown source | 4-layer design, mixed-signal instrumentation, systematic debugging |
+A 4-layer board combining two designs: the top layer is Golden Arduino V2, a revised version of the [Board 3](../board-03-golden-arduino) custom ATmega328 board built around the lessons learned there, and the bottom layer is "Instrument Droid" — an intelligent measurement system (DAC, op-amp, MOSFET, ATmega48A) that characterizes an unknown voltage source's Thevenin voltage and resistance as a function of output current.
 
-## Highlight: Instrument Droid
+## What Was Done
 
-The most complex board of the four: a 4-layer design combining a refined second-generation Golden Arduino with a custom measurement instrument built around a DAC, op-amp, and MOSFET, controlled by an ATmega48A. Instrument Droid characterizes an unknown voltage source by sweeping current and calculating its Thevenin voltage and resistance — then validating the result against ground truth. Tested against a function generator with a known 50Ω source resistance, it measured **48Ω**.
+- Redesigned Golden Arduino as V2: smaller board size, shorter traces to key components, moved to a 4-layer stack, removed the 3.3V LDO used in Board 3
+- Designed Instrument Droid on the board's bottom layer: DAC + op-amp + MOSFET stage driven by an ATmega48A, sweeping output current to characterize a voltage source
+- Added 3 addressable smart LEDs and header pins for a planned future OLED readout
+- Debugged a hard failure (`avrdude: stk500_recv(): programmer is not responding`) that blocked all code uploads — traced past the CH340G and TVS diode (both swapped, no fix) to the actual root cause: separate 5V nets in the layout were never tied together, starving the ATmega's TXD/RXD at ~3.3V instead of 5V. Fixed with a bodge wire tying the nets together.
+- Validated Instrument Droid against three known voltage sources: a 5V wall jack, a 9V DC power supply, and a 5V function generator with a known 50 Ω Thevenin resistance
 
-Bring-up wasn't smooth: the board initially failed to program at all, throwing an `avrdude: stk500_recv()` error. Root-causing it took hours — the fix turned out to be a single missing 5V trace connection in the layout that had left part of the board running at 3.3V instead of 5V.
+## Key Results
 
-## What Four Boards Taught Me
+| Metric | Result |
+|---|---|
+| Thevenin resistance accuracy | Measured ~48 Ω on a function generator with a known 50 Ω source resistance — ~4% error |
+| Root-cause debugging | Isolated a board-killing net-connectivity issue via component-swap elimination + TA collaboration, fixed with a single bodge wire |
+| Design iteration | Reduced board footprint and trace length vs. Board 3, per that board's own post-mortem |
 
-- **Review the layout before generating Gerbers, every time.** The Instrument Droid bring-up failure traced back to a single missing power trace that a careful design review would have caught before fab.
-- **Test points aren't optional.** Debugging Instrument Droid would have been faster with more test points placed up front — this shaped how test points were planned on later boards.
-- **More space isn't automatically better.** Golden Arduino's extra board size and increased distance between components were meant to make routing easier, but likely introduced more trace inductance and hurt switching performance compared to a commercial board.
-- **Decoupling capacitors have a right amount.** Over-adding them on Golden Arduino may have contributed to inrush current and noise rather than reducing it — good practices still need to be applied judiciously, not maximally.
-- **Comparative, quantified testing beats "it looks like it works."** Measuring rise/fall times side-by-side (Board 02) and validating Instrument Droid against a known 50Ω reference (Board 04) turned "I think this works" into a number that either confirms it or doesn't.
+## What I'd Do Differently
+
+- **Review the layout against the schematic before generating Gerbers** — the disconnected 5V nets were a layout oversight that a careful pre-fab review would have caught, and cost hours of debugging
+- **Add more test points** — the board had too few to make isolating the root cause fast; more test points would have shortened the debug cycle significantly
+
+## Figures
+
+![Board 4, Golden Arduino V2 top layer with smart LEDs](images/01-board-photo.jpeg)
+*Assembled 4-layer board — Golden Arduino V2 on top, Instrument Droid underneath, with the smart LED addition.*
+
+![PCB layout showing the disconnected 5V nets](images/02-missing-5v-net-layout.png)
+*The layout oversight that caused the upload failure — separate 5V nets that were never tied together.*
+
+![Thevenin resistance measurement, function generator](images/03-thevenin-resistance-plot.png)
+*Instrument Droid's measured Thevenin resistance (~48 Ω) against the function generator's known 50 Ω.*
+
+## Full Report
+
+Full board report (with Altium schematic/layout, all data captures, and additional smart-LED photos) to be added to this folder.
