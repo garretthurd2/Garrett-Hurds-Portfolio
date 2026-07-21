@@ -1,9 +1,10 @@
 # Power Electronics Lab
 
 **Course:** ECEN 4517 – Power Electronics Laboratory, University of Colorado Boulder
+
 **Team:** Garrett Hurd, Christian Lopez
 
-A four-stage power system built from the ground up: characterizing a PV panel, converting and tracking its peak power into a battery, boosting that battery voltage to a high-voltage DC bus, and inverting that bus to household-outlet-equivalent AC. Each stage below is a standalone write-up — click through for the full breakdown, key results, and figures. Full lab report PDFs are included in each stage folder.
+A four-stage power system built from the ground up: characterizing a PV panel, converting and tracking its peak power into a battery, boosting that battery voltage to a high-voltage DC bus, and inverting that bus to household-outlet-equivalent AC. Each stage below is a standalone write-up, feel free to click through for the full breakdown, key results, and figures. Full lab report PDFs are included in each stage folder.
 
 | Stage | What it is | Key result |
 |---|---|---|
