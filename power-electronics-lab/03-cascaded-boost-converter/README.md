@@ -29,11 +29,10 @@ Designed and built a two-stage (cascaded) boost converter to step the battery's 
 
 ## Figures
 
-![Cascaded boost converter power stage, top and bottom view](images/01-cascaded-boost-board.png)
+<img width="2918" height="2115" alt="IMG_0736" src="https://github.com/user-attachments/assets/f4a22e41-9155-4c54-92b6-80cb9fab36b1" />
+
 *Two-stage boost power stage, constructed and bench-tested.*
 
-![Inductor 1 and Inductor 2 current waveforms](images/02-inductor-current-waveforms.png)
-*L1 and L2 current waveforms during full-load testing.*
 
 ## Full Report
 
