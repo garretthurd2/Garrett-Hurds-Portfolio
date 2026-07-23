@@ -26,14 +26,6 @@ Characterized an 85 W PV panel's I-V behavior under full sun and partial shading
 | LTSpice model vs. measured (shaded, w/ backplane diode) | 33.35 W simulated vs. 32.16 W measured — within ~4% |
 | Direct battery charging (no MPPT) | 64 W — 86.6% of the panel's measured max power point |
 
-## Figures
-
-![Unshaded and shaded I-V curves](images/01-unshaded-iv-curve.png)
-*Measured I-V curve, unshaded panel.*
-
-![LTSpice equivalent circuit model validation](images/05-ltspice-iv-pv-curves.png)
-*LTSpice single-diode model I-V and P-V curves vs. measured data.*
-
 ## Full Report
 
-Full lab report (PDF) to be added to this folder.
+Full lab report, with all calculations, scope captures & LTSpice simulations captures are include in this folder.
