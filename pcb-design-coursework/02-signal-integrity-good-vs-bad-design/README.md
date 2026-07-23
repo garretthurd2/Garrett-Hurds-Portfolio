@@ -4,7 +4,7 @@
 
 ## Overview
 
-Two identical hex-inverter circuits on the same board, laid out with opposite design philosophies, to directly measure the signal-integrity cost of skipping good PCB practices. The "good" side uses a decoupling capacitor placed close to the IC, short traces, and a return plane. The "bad" side uses a decoupling capacitor placed far from the IC, long traces, and no return plane. A shared 555 timer (reused from [Board 1](../board-01-555-timer-astable-oscillator)) drives a switch to route the same signal into either side for comparison.
+Two identical hex-inverter circuits on the same board, laid out with opposite design philosophies, to directly measure the signal-integrity cost of skipping good PCB practices. The "good" side uses a decoupling capacitor placed close to the IC, short traces, and a return plane. The "bad" side uses a decoupling capacitor placed far from the IC, long traces, and no return plane. A shared 555 timer (reused from [Board 1](../01-555-timer-astable-oscillator)) drives a switch to route the same signal into either side for comparison.
 
 ## What Was Done
 
