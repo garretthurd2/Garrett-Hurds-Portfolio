@@ -10,7 +10,7 @@
 
 ## Mission
 
-A fishing rod controller for quadriplegic, paraplegic, and traumatic brain injury patients — built for recreational fishing outings at Craig Hospital, hosted by the River Deep Foundation. A single lever-and-button controller drives the casting, reeling, and bait-release motions of a modified commercial fishing rod, letting a user with limited hand dexterity fish independently. Every design decision was filtered through one question: does this help the end user actually use the device, not just work on a bench.
+A fishing rod controller for quadriplegic, paraplegic, and traumatic brain injury patients, built for recreational fishing outings at Craig Hospital, hosted by the River Deep Foundation. A single lever-and-button controller drives the casting, reeling, and bait-release motions of a modified commercial fishing rod, letting a user with limited hand dexterity fish independently. Every design decision was filtered through one question: does this help the end user actually use the device, not just work on a bench.
 
 ## System Architecture
 
