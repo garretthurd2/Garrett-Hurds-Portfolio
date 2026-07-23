@@ -36,6 +36,6 @@ Designed and built a 100 kHz buck converter to step the PV panel's output down t
 
 *Buck converter power stage, constructed and bench-tested.*
 
-## Full Reports
+## Full Report
 
 Full lab report, with all calculations, scope captures & LTSpice simulations captures are include in this folder.
