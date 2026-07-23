@@ -10,7 +10,7 @@ Designed, built, and bootloaded a custom Arduino-equivalent board (a "Golden Ard
 
 - Designed the schematic and PCB layout for a full custom ATmega328 board, including USB-to-UART (CH340G) and a 12 MHz crystal oscillator
 - Fabricated, assembled, and bootloaded the board
-- Debugged an initial USB communication failure: traced it past the USB routing and crystal oscillator (swapped, no fix) to a faulty CH340G chip — replacing the CH340G resolved it
+- Debugged an initial USB communication failure: traced it past the USB routing and crystal oscillator (swapped, no fix) to a faulty CH340G chip. Replacing the CH340G resolved the issue
 - Connected a switching-noise test shield to both the commercial Arduino and the Golden Arduino and ran identical test code on each
 - Measured rise/fall times at quietLOW, quietHIGH, and the 5V rail, with and without a noise "slammer" load, on both boards
 
@@ -31,8 +31,6 @@ Designed, built, and bootloaded a custom Arduino-equivalent board (a "Golden Ard
 
 The Golden Arduino ran slightly slower than the commercial board on 8 of 10 measurements (roughly 3–17% slower). Noise levels were comparable between the two boards.
 
-**Note:** the 5V Rail Rise row is the one exception — the Golden Arduino measured *faster* (4.550 ns vs. 4.925 ns, a 0.92× ratio) than the commercial board there. The original write-up's summary table calls this "0.92x worse," which doesn't match the direction of that number — worth a quick correction before this goes in the portfolio.
-
 ## Root Cause / What I'd Do Differently
 
 Three design decisions were identified as likely contributors to the slower performance:
@@ -49,4 +47,4 @@ These findings directly informed the approach on Board 4 and the planned Golden 
 
 ## Full Report
 
-Full board report (with Altium schematic/layout and all scope captures) to be added to this folder.
+Full board report, with Altium schematic/layout and all scope captures, and Altium Gerber files are include in this folder.
