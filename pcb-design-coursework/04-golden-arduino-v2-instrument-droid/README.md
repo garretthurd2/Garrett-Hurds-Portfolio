@@ -29,14 +29,12 @@ A 4-layer board combining two designs: the top layer is Golden Arduino V2, a rev
 
 ## Figures
 
-![Board 4, Golden Arduino V2 top layer with smart LEDs](images/01-board-photo.jpeg)
+<img width="1900" height="1482" alt="IMG_0766" src="https://github.com/user-attachments/assets/439b3930-62ce-4d63-9a26-a6564482da2e" />
+
+<img width="2325" height="1723" alt="IMG_0767" src="https://github.com/user-attachments/assets/2fde15c9-3858-489b-839e-cac14fc80a22" />
+
+
 *Assembled 4-layer board — Golden Arduino V2 on top, Instrument Droid underneath, with the smart LED addition.*
-
-![PCB layout showing the disconnected 5V nets](images/02-missing-5v-net-layout.png)
-*The layout oversight that caused the upload failure — separate 5V nets that were never tied together.*
-
-![Thevenin resistance measurement, function generator](images/03-thevenin-resistance-plot.png)
-*Instrument Droid's measured Thevenin resistance (~48 Ω) against the function generator's known 50 Ω.*
 
 ## Full Report
 
