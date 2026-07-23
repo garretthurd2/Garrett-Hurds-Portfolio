@@ -38,6 +38,7 @@ SW2 (used to switch the 555 output between the good and bad hex-inverter sides) 
 
 ## Images
 <img width="2081" height="1708" alt="IMG_0668" src="https://github.com/user-attachments/assets/01ad1544-7709-4f42-bbc8-0892064a17f3" />
+
 *Assembled board — identical hex-inverter circuits, good design practices on one side, bad on the other.*
 
 ## Full Report
