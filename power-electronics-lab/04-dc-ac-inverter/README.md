@@ -26,7 +26,8 @@ Designed and built a modified sine-wave inverter to convert the high-voltage DC 
 
 ## Figures
 
-![DC-AC inverter circuit board, top and bottom view](images/01-inverter-board.png)
+<img width="3287" height="2803" alt="IMG_0748" src="https://github.com/user-attachments/assets/0fed7721-5d68-4559-8745-a36a7f9fb908" />
+
 *Modified sine-wave inverter, constructed and bench-tested.*
 
 ![Output RMS voltage and current waveforms](images/02-output-waveforms.png)
