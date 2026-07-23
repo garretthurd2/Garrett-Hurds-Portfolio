@@ -28,9 +28,7 @@ DC-DC and DC-AC power conversion, LTSpice-validated.
 → [More details](power-electronics-lab/)
 
 ### APEX — Avionics Protocol Embedded eXperiment (In active development)
-Multi-protocol embedded sensor fusion node on ESP32. *(personal project)*
-→ [More details](#)
+Multi-protocol embedded sensor fusion node on ESP32. *(personal project, files coming soon)*
 
 ### Personal Homelab for local AI & Electronics Development (In active development)
-Implementing a two-machine Linux-based development ecosystem to serve as my primary platform for AI, electronics, and networking projects.
-→ [More details](#)
+Implementing a two-machine Linux-based development ecosystem to serve as my primary platform for AI, electronics, and networking projects. *(personal project, files coming soon)*
