@@ -38,4 +38,4 @@ Designed and built a 100 kHz buck converter to step the PV panel's output down t
 
 ## Full Reports
 
-Full lab reports (Buck Converter Design & Testing, Sensing/MPPT/Field Testing — PDFs) to be added to this folder.
+Full lab report, with all calculations, scope captures & LTSpice simulations captures are include in this folder.
