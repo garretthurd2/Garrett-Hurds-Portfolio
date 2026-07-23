@@ -6,7 +6,7 @@
 
 ## Overview
 
-Designed and built a modified sine-wave inverter to convert the high-voltage DC bus from the [Stage 03 cascaded boost converter](../03-cascaded-boost-converter) into household-outlet-equivalent AC — completing the panel-to-battery-to-AC-load power path for the system.
+Designed and built a modified sine-wave inverter to convert the high-voltage DC bus from the [Stage 03 cascaded boost converter](../03-cascaded-boost-converter) into household-outlet-equivalent AC, completing the panel-to-battery-to-AC-load power path for the system.
 
 ## What Was Done
 
@@ -34,4 +34,4 @@ Designed and built a modified sine-wave inverter to convert the high-voltage DC 
 
 ## Full Report
 
-Full lab report (PDF) to be added to this folder.
+Full lab report, with all calculations, scope captures & LTSpice simulations captures are include in this folder.
