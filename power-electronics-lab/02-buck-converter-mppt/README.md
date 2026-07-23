@@ -31,11 +31,10 @@ Designed and built a 100 kHz buck converter to step the PV panel's output down t
 
 ## Figures
 
-![Buck converter power stage, top and bottom view](images/01-buck-converter-board.png)
-*Buck converter power stage, constructed and bench-tested.*
+<img width="4266" height="3624" alt="IMG_0683" src="https://github.com/user-attachments/assets/7b549fc7-1c63-49a9-bf44-b5630a522d5d" />
 
-![MPPT algorithm tracking maximum power point over time](images/02-mppt-tracking-chart.png)
-*MPPT duty-cycle sweep converging on the panel's maximum power point.*
+
+*Buck converter power stage, constructed and bench-tested.*
 
 ## Full Reports
 
