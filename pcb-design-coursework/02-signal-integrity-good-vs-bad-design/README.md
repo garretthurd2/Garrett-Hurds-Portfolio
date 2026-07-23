@@ -38,18 +38,8 @@ Two identical hex-inverter circuits on the same board, laid out with opposite de
 SW2 (used to switch the 555 output between the good and bad hex-inverter sides) intermittently let both sides light up at once rather than switching cleanly — attributed to a soldering issue on that switch, not a design flaw.
 
 ## Figures
-
-![Board 2 assembled, good and bad design sides]
-
 <img width="2081" height="1708" alt="IMG_0668" src="https://github.com/user-attachments/assets/01ad1544-7709-4f42-bbc8-0892064a17f3" />
-
 *Assembled board — identical hex-inverter circuits, good design practices on one side, bad on the other.*
-
-![Good design hex inverter output](images/02-good-design-output.png)
-*Hex inverter output, good-design side — clean transitions, minimal noise.*
-
-![Bad design hex inverter output](images/03-bad-design-output.png)
-*Hex inverter output, bad-design side — visibly more noise on the same signal.*
 
 ## Full Report
 
