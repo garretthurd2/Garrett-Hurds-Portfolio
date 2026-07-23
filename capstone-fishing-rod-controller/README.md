@@ -14,13 +14,13 @@ A fishing rod controller for quadriplegic, paraplegic, and traumatic brain injur
 
 ## System Architecture
 
-<img width="741" height="531" alt="Block_Diagram_V3 1drawio1" src="https://github.com/user-attachments/assets/d26367ad-80c5-4b61-b2af-52e34d60144c" />
+<img width="742" height="532" alt="Block Diagram 3 2" src="https://github.com/user-attachments/assets/a4275069-06df-411e-9a75-78ed54cf3d9c" />
 
 <img width="2556" height="2251" alt="IMG_0733" src="https://github.com/user-attachments/assets/b315be9d-4dcc-49a3-a90c-8a72b9b29fd9" />
 
 <img width="2537" height="2357" alt="IMG_0734" src="https://github.com/user-attachments/assets/eec62414-6d5f-4dc5-bb7f-e601deacc78f" />
 
-Two stacked PCBs: a bottom board carrying the power distribution, LDO, and all three motor driver circuits, and a top board carrying a custom Arduino-equivalent microcontroller plus the buck converter — built in two swappable versions (custom and commercial buck converter) so a failure in one wouldn't take down the whole system before Expo.
+Two stacked PCBs: a bottom board carrying the power distribution, LDO, and all three motor driver circuits, and a top board carrying a custom Arduino-equivalent microcontroller plus the buck converter. 
 
 ## My Role: Power System
 
@@ -50,7 +50,7 @@ Current budget (calculated pre-build, confirmed against oscilloscope current mea
 
 ## What Didn't Work / Root Cause
 
-- **Custom buck converter (×2):** missing feedback loop on the first pass; the second, IC-based attempt melted under real system load despite testing fine in isolation — a reminder that bench validation with a lab supply doesn't always catch what happens under the actual system's transient loads
+- **Custom buck converter (×2):** missing feedback loop on the first pass; the second, IC-based attempt melted under real system load despite testing fine in isolation. A reminder that bench validation with a lab supply doesn't always catch what happens under the actual system's transient loads
 - **H-bridge gate driver:** an unfamiliar gate-driver topology ate roughly a month before the team pivoted to a design everyone was confident in
 - **Integration surprises:** individual circuits all worked independently, but stuffing everything into the final housing before acceptance testing surfaced new heating and solder-joint issues that hadn't shown up on the open bench
 
@@ -66,7 +66,6 @@ Current budget (calculated pre-build, confirmed against oscilloscope current mea
 
 *The Ohm++ team. Tyler Martin, Felipe Tamayo-Tapia, Vedant Shah, Garrett Hurd, Pedro Mejido, Travis Wood (left to right)*
 
-
 <img width="4112" height="3761" alt="controller" src="https://github.com/user-attachments/assets/6cd10841-9927-4ca9-a413-26baefcf5332" />
 
 *The final controller — lever, cast/reel mode buttons, and emergency stop, coated in truck bed liner for grip and weather resistance.*
@@ -75,6 +74,6 @@ Current budget (calculated pre-build, confirmed against oscilloscope current mea
 
 *Completed final device w/ new power system and controller.*
 
-## Full Report
+## Documents
 
-Full capstone final report (PDF), including all Altium schematics/layouts, team retrospectives, and additional figures, to be added to this folder.
+Full capstone final reports, Critical Design Review presentation, and Preliminary Design Review presentation are included in this folder for viewing.
