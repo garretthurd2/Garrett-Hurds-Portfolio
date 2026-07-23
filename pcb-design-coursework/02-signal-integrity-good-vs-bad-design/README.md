@@ -34,7 +34,7 @@ Two identical hex-inverter circuits on the same board, laid out with opposite de
 
 ## Known Issue
 
-SW2 (used to switch the 555 output between the good and bad hex-inverter sides) intermittently let both sides light up at once rather than switching cleanly — attributed to a soldering issue on that switch, not a design flaw.
+SW2 (used to switch the 555 output between the good and bad hex-inverter sides) intermittently let both sides light up at once rather than switching cleanly. This attributed to a soldering issue on that switch, not a design flaw.
 
 ## Images
 <img width="2081" height="1708" alt="IMG_0668" src="https://github.com/user-attachments/assets/01ad1544-7709-4f42-bbc8-0892064a17f3" />
