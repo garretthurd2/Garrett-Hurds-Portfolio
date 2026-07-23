@@ -11,11 +11,8 @@ A fishing rod controller for quadriplegic, paraplegic, and traumatic brain injur
 
 ## System Architecture
 
-```
-24V Drill Battery → Buck Converter (24V→12V) → Motor Drivers (Reel, Stepper, Thumb/Linear Actuator)
-                                    ↓
-                             LDO (12V→5V) → Microcontroller + Controller I/O
-```
+<img width="741" height="531" alt="Block_Diagram_V3 1drawio1" src="https://github.com/user-attachments/assets/d26367ad-80c5-4b61-b2af-52e34d60144c" />
+
 
 Two stacked PCBs: a bottom board carrying the power distribution, LDO, and all three motor driver circuits, and a top board carrying a custom Arduino-equivalent microcontroller plus the buck converter — built in two swappable versions (custom and commercial buck converter) so a failure in one wouldn't take down the whole system before Expo.
 
