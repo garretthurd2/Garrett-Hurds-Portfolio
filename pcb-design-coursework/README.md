@@ -2,7 +2,7 @@
 
 **Course:** ECEN 3730 – PCB Design, University of Colorado Boulder
 
-Four boards, each building directly on lessons from the last — from a first 555 timer layout through a custom ATmega328 board benchmarked against a commercial Arduino, to a 4-layer board combining a revised microcontroller design with a real measurement instrument. Each board below is a standalone write-up — click through for the full breakdown, key results, and figures. Full board reports (Altium schematics/layouts) are included in each board's folder.
+Four boards, each building directly on lessons from the last. From a first 555 timer layout through a custom ATmega328 board benchmarked against a commercial Arduino, to a 4-layer board combining a revised microcontroller design with a real measurement instrument. Each board below is a standalone write-up. Click through for the full breakdown, key results, and figures. Full board reports (Altium schematics/layouts) are included in each board's folder.
 
 | Board | What it is | Key result |
 |---|---|---|
