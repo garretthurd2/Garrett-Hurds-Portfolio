@@ -31,11 +31,9 @@ One soft error: the 555 timer's routing could have been cleaner. No hard errors.
 
 ## Figures
 
-![Assembled Board 1 with LEDs](images/01-board-photo.jpeg)
-*Assembled board, 555 timer driving indicator LEDs at three series resistances.*
+<img width="2371" height="1425" alt="IMG_0648" src="https://github.com/user-attachments/assets/156560da-0789-4ecc-9d82-27f1b3367d2c" />
 
-![TP2 oscilloscope capture](images/02-tp2-scope-capture.png)
-*555 timer output at TP2, confirming oscillation near the 500 Hz / 50% duty cycle target.*
+*Assembled board, 555 timer driving indicator LEDs at three series resistances.*
 
 ## Full Report
 
