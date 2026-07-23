@@ -30,8 +30,7 @@ Designed and built a modified sine-wave inverter to convert the high-voltage DC 
 
 *Modified sine-wave inverter, constructed and bench-tested.*
 
-![Output RMS voltage and current waveforms](images/02-output-waveforms.png)
-*Measured output voltage and current — the stepped shape is characteristic of a modified sine wave.*
+
 
 ## Full Report
 
