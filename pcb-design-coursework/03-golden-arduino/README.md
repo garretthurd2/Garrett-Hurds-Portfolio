@@ -44,15 +44,8 @@ Three design decisions were identified as likely contributors to the slower perf
 These findings directly informed the approach on Board 4 and the planned Golden Arduino V2.
 
 ## Figures
-
-![Golden Arduino board, powered up and bootloaded](images/01-board-photo.jpeg)
+<img width="2483" height="2114" alt="IMG_0718" src="https://github.com/user-attachments/assets/845b5e19-fd73-4ace-86f0-7d8769d91745" />
 *Golden Arduino, custom ATmega328 board, powered up and running the comparison test code.*
-
-![Commercial Arduino 5V rail rise time](images/02-commercial-5v-rail-rise.png)
-*Commercial Arduino — 5V rail rise time.*
-
-![Golden Arduino 5V rail rise time](images/03-golden-5v-rail-rise.png)
-*Golden Arduino — 5V rail rise time, the one metric where it outperformed the commercial board.*
 
 ## Full Report
 
