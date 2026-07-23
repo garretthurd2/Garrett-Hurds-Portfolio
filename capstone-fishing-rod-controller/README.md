@@ -1,8 +1,11 @@
 # Ohm++ — Adaptive Fishing Rod Controller
 
 **Senior Capstone, Electrical & Computer Engineering, University of Colorado Boulder**
+
 **Team:** Garrett Hurd (Project Lead, Power), Tyler Martin (Analog Circuits, Testing, RF), Pedro Mejido (System Architect, PCB), Vedant Shah (Software), Felipe Tamayo-Tapia (Embedded), Travis Wood (User Interface, Mechanical)
+
 **Mentor:** Prof. Eric Bogatin, John Lettang
+
 **Sponsors:** QL Plus (Scott Huyvaert), River Deep Foundation (Bob Adwar)
 
 ## Mission
