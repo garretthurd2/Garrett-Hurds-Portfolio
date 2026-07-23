@@ -29,7 +29,7 @@ First PCB design of the course: a 555 timer configured in astable mode to genera
 
 One soft error: the 555 timer's routing could have been cleaner. No hard errors. This is directly reflected in the routing approach on Board 2.
 
-## Figures
+## Images
 
 <img width="2371" height="1425" alt="IMG_0648" src="https://github.com/user-attachments/assets/156560da-0789-4ecc-9d82-27f1b3367d2c" />
 
@@ -37,4 +37,4 @@ One soft error: the 555 timer's routing could have been cleaner. No hard errors.
 
 ## Full Report
 
-Full board report (with Altium schematic/layout and all scope captures) to be added to this folder.
+Full board report, with Altium schematic/layout and all scope captures, and Altium files are include in this folder.
