@@ -60,19 +60,20 @@ Current budget (calculated pre-build, confirmed against oscilloscope current mea
 - Flagging high-risk subsystems early and building in a fallback path (the swappable buck converter board) is what kept the project on schedule when that risk materialized
 - Hardware/software integration failures are often the smallest details — a misplaced variable, a single unconnected wire — and methodical, patient debugging is a learnable skill, not just a personality trait
 
-## Figures
+## Images
 
-![Team at Capstone Expo with the finished device](images/01-team-expo-photo.png)
-*The Ohm++ team at Capstone Expo with the completed adaptive fishing rod controller.*
+<img width="3297" height="3308" alt="image" src="https://github.com/user-attachments/assets/1a085b02-0e2c-4bc0-aa88-f783075aebdc" />
 
-![Bottom PCB — power distribution and motor drivers](images/02-bottom-power-distribution-pcb.png)
-*Bottom board: power distribution, LDO, and reel/stepper/thumb motor driver circuits.*
+*The Ohm++ team. Tyler Martin, Felipe Tamayo-Tapia, Vedant Shah, Garrett Hurd, Pedro Mejido, Travis Wood (left to right)*
 
-![Handheld controller](images/03-controller-photo.png)
+
+<img width="4112" height="3761" alt="controller" src="https://github.com/user-attachments/assets/6cd10841-9927-4ca9-a413-26baefcf5332" />
+
 *The final controller — lever, cast/reel mode buttons, and emergency stop, coated in truck bed liner for grip and weather resistance.*
 
-![Current consumption analysis](images/04-current-consumption-analysis.png)
-*Pre-build current budget analysis for the casting motor, confirmed against oscilloscope current measurements.*
+<img width="3090" height="5371" alt="IMG_0741" src="https://github.com/user-attachments/assets/12a374e9-51b0-4ba5-87ff-2501d7f03d91" />
+
+*Completed final device w/ new power system and controller.*
 
 ## Full Report
 
