@@ -29,12 +29,12 @@ As Power lead, I owned the battery selection, voltage regulation, and motor driv
 **Power distribution:** A 24V 12 Ah lithium drill battery (chosen so end users and recreational therapists could swap it like any cordless tool battery) feeds a buck converter down to 12V for the three motor drivers, then an LDO down to 5V for the microcontroller and controller electronics.
 
 **Motor drivers:**
-- **Reel motor:** a simple, effective low-side MOSFET + PWM design — one of the few subsystems that worked essentially on the first try
+- **Reel motor:** a simple, effective low-side MOSFET + PWM design
 - **Stepper motor (casting):** drives the casting arm, tensioning a spring for the back-cast and free-wheeling to release it forward
 - **Thumb/linear actuator:** releases the bait-caster's clutch at a precisely timed point in the forward-cast arc (45°), timed via slow-motion camera analysis of the release point
-- **H-bridge:** went through a full redesign mid-project — the original gate-driver approach (pulling gate voltage above drain voltage) was unfamiliar territory and cost about a month of debugging before we cut losses and switched to a simpler opamp-based logic-control design. Schottky diodes were added in parallel with the MOSFETs to dissipate back-EMF from the stepper's return spring; without them, the rod's return motion stuttered instead of moving smoothly.
+- **H-bridge:** went through a full redesign mid-project. The original gate-driver approach (pulling gate voltage above drain voltage) was unfamiliar territory and cost about a month of debugging before we cut losses and switched to a simpler opamp-based logic-control design. Schottky diodes were added in parallel with the MOSFETs to dissipate back-EMF from the stepper's return spring; without them, the rod's return motion stuttered instead of moving smoothly.
 
-**Buck converter — what didn't work:** the custom buck converter was one of the highest-risk parts of the design, and it failed twice. First attempt missed a feedback loop entirely. Second attempt (an IC-based design with integrated feedback) tested fine standalone but melted on contact with the actual system power rails during acceptance testing. Both PCB revisions kept header-pin compatibility with an off-the-shelf buck converter as a fallback specifically because this was flagged as high-risk early — that fallback is what shipped at Expo.
+**Buck converter — what didn't work:** the custom buck converter was one of the highest-risk parts of the design, and it failed twice. First attempt missed a feedback loop entirely. Second attempt (an IC-based design with integrated feedback) tested fine standalone but melted on contact with the actual system power rails during acceptance testing. Both PCB revisions kept header-pin compatibility with an off-the-shelf buck converter as a fallback specifically because this was flagged as high-risk early.
 
 ## Key Results
 
@@ -43,7 +43,7 @@ As Power lead, I owned the battery selection, voltage regulation, and motor driv
 | Battery life | 2 hours | 8 hours of continuous casting/reeling at Expo, battery still at ~75% charge |
 | Safety | No exposed wiring, no excess heat/shock risk | Met — minimized current draw, sealed electrical housing |
 | Weatherproofing | Rain-resistant | ABS enclosures, acetone vapor-sealed, coated in spray-on truck bed liner |
-| Usability | New user operational in <5 minutes, no instruction beyond controller labels | Met — validated by handing the controller to passersby |
+| Usability | New user operational in <5 minutes, no instruction beyond controller labels | Met. Validated by handing the controller to passersby |
 | Cast release timing | Consistent 45° release angle | Achieved via iterative slow-motion camera calibration |
 
 Current budget (calculated pre-build, confirmed against oscilloscope current measurements): casting motor 2.4 A during a 12-second max back-cast, reeling motor 0.41 A, thumb actuator 0.195 A — totaling roughly 1.26 Ah for a worst-case 2-hour trip at 30 casts/hour. The 12 Ah battery gave enormous headroom over that calculated minimum, which is exactly why it ran 8 hours instead of 2.
