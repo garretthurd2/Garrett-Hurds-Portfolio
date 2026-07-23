@@ -4,7 +4,7 @@
 
 ## Overview
 
-A 4-layer board combining two designs: the top layer is Golden Arduino V2, a revised version of the [Board 3](../board-03-golden-arduino) custom ATmega328 board built around the lessons learned there. The bottom layer is "Instrument Droid", an intelligent measurement system (DAC, op-amp, MOSFET, ATmega48A) that characterizes an unknown voltage source's Thevenin voltage and resistance as a function of output current.
+A 4-layer board combining two designs: the top layer is Golden Arduino V2, a revised version of the [Board 3](../03-golden-arduino) custom ATmega328 board built around the lessons learned there. The bottom layer is "Instrument Droid", an intelligent measurement system (DAC, op-amp, MOSFET, ATmega48A) that characterizes an unknown voltage source's Thevenin voltage and resistance as a function of output current.
 
 ## What Was Done
 
