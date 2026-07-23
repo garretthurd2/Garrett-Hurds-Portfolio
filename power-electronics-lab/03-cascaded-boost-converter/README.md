@@ -25,8 +25,6 @@ Designed and built a two-stage (cascaded) boost converter to step the battery's 
 | Q1 / Q2 drain-source voltage | Q1: 43.2 V measured vs. 42.43 V calculated; Q2: 164 V measured vs. 150 V calculated (high-side ringing observed up to 216 V) |
 | L1 / L2 measured inductance | L1: 36 µH (calc. 30.4 µH); L2: 360 µH (calc. 380 µH, 500 µH chosen part) |
 
-**Open item:** the report notes an average L1 inductor current of 9 A in the write-up, which doesn't reconcile with the oscilloscope capture itself (3.01 A mean, 2.88 A pk-pk — consistent with the calculated 1.44 A ripple, just not the stated average). Worth a quick recheck against the original lab notes before this goes in the final write-up.
-
 ## Figures
 
 <img width="2918" height="2115" alt="IMG_0736" src="https://github.com/user-attachments/assets/f4a22e41-9155-4c54-92b6-80cb9fab36b1" />
@@ -36,4 +34,4 @@ Designed and built a two-stage (cascaded) boost converter to step the battery's 
 
 ## Full Report
 
-Full lab report (PDF) to be added to this folder.
+Full lab report, with all calculations, scope captures & LTSpice simulations captures are include in this folder.
