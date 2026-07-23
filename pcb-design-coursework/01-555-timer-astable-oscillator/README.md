@@ -37,4 +37,4 @@ One soft error: the 555 timer's routing could have been cleaner. No hard errors.
 
 ## Full Report
 
-Full board report, with Altium schematic/layout and all scope captures, and Altium files are include in this folder.
+Full board report, with Altium schematic/layout and all scope captures, and Altium Gerber files are include in this folder.
