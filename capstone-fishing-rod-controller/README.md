@@ -13,6 +13,9 @@ A fishing rod controller for quadriplegic, paraplegic, and traumatic brain injur
 
 <img width="741" height="531" alt="Block_Diagram_V3 1drawio1" src="https://github.com/user-attachments/assets/d26367ad-80c5-4b61-b2af-52e34d60144c" />
 
+<img width="2556" height="2251" alt="IMG_0733" src="https://github.com/user-attachments/assets/b315be9d-4dcc-49a3-a90c-8a72b9b29fd9" />
+
+<img width="2537" height="2357" alt="IMG_0734" src="https://github.com/user-attachments/assets/eec62414-6d5f-4dc5-bb7f-e601deacc78f" />
 
 Two stacked PCBs: a bottom board carrying the power distribution, LDO, and all three motor driver circuits, and a top board carrying a custom Arduino-equivalent microcontroller plus the buck converter — built in two swappable versions (custom and commercial buck converter) so a failure in one wouldn't take down the whole system before Expo.
 
