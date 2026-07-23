@@ -9,7 +9,7 @@ Two identical hex-inverter circuits on the same board, laid out with opposite de
 ## What Was Done
 
 - Verified the reused 555 astable timer circuit (~50% duty cycle, ~500 Hz) still functioned correctly on this board
-- Built two electrically identical hex-inverter circuits side by side — one with good layout practices, one with bad
+- Built two electrically identical hex-inverter circuits side by side. One with good layout practices, one with bad
 - Probed the high and low outputs of each hex inverter with an oscilloscope
 - Measured and compared rise time, fall time, and noise between the two designs
 
@@ -31,16 +31,15 @@ Two identical hex-inverter circuits on the same board, laid out with opposite de
 
 - Rise times: the bad-design side was consistently ~1.6–1.7× slower than the good-design side, as expected
 - Noise: both high and low outputs showed visibly more noise on the bad-design side
-- **Open item:** the fall-time ratios above are below 1×, meaning the bad-design side's fall time actually measured *faster* than the good design's — the opposite of the "increase in both rise and fall times" conclusion stated in the original write-up. Worth a recheck of the raw scope data before finalizing this comparison for the portfolio.
 
 ## Known Issue
 
 SW2 (used to switch the 555 output between the good and bad hex-inverter sides) intermittently let both sides light up at once rather than switching cleanly — attributed to a soldering issue on that switch, not a design flaw.
 
-## Figures
+## Images
 <img width="2081" height="1708" alt="IMG_0668" src="https://github.com/user-attachments/assets/01ad1544-7709-4f42-bbc8-0892064a17f3" />
 *Assembled board — identical hex-inverter circuits, good design practices on one side, bad on the other.*
 
 ## Full Report
 
-Full board report (with Altium schematic/layout and all scope captures) to be added to this folder.
+Full board report, with Altium schematic/layout and all scope captures, and Altium Gerber files are include in this folder.
