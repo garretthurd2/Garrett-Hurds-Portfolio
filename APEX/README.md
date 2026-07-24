@@ -6,21 +6,21 @@ I am currently designing and developing a multi-protocol embedded sensor fusion 
 
 ## System Overview
 
-**ESP32** Used for central processing, WiFi/BLE capable for telemetry, dual-core for FreeRTOS task partitioning
+**ESP32:** Used for central processing, WiFi/BLE capable for telemetry, dual-core for FreeRTOS task partitioning
 
-**BME280** Environmental Sensor (temp/humidity/pressure) communicated via I2C
+**BME280:** Environmental Sensor (temp/humidity/pressure) communicated via I2C
 
-**ISM330DHCX** 6-axis accel/gyro senor communicated via SPI
+**ISM330DHCX:** 6-axis accel/gyro senor communicated via SPI
 
-**NEO-6M** GPS module communicated via UART
+**NEO-6M:** GPS module communicated via UART
 
 
-## Status
+## Project Status
 
 Phase 1: Component Selection & Research - **Completed**
 
-**Phase 2: Breadboard Bring-Up & Individual Driver Development**
+**Phase 2: Breadboard Bring-Up & Individual Driver Development - In Process**
 
-Phase 3 — Full System Integration
+Phase 3: Full System Integration - Planned
 
-Phase 4 — Custom PCB Design & Fabrication
+Phase 4: Custom PCB Design & Fabrication - Planned
