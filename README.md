@@ -27,8 +27,8 @@ Four boards, one semester, full schematic-to-bring-up flow.
 DC-DC and DC-AC power conversion, LTSpice-validated.
 → [More details](power-electronics-lab/)
 
-### APEX — Avionics Protocol Embedded eXperiment (In active development)
-Multi-protocol embedded sensor fusion node on ESP32. *(personal project, files coming soon)*
+### APEX — Avionics Protocol Embedded eXperiment
+Multi-protocol embedded sensor fusion node on ESP32. *(personal project, in active development)*
 → [More details](APEX/)
 
 ### Personal Homelab for local AI & Electronics Development (In active development)
