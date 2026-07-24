@@ -4,7 +4,7 @@
 
 I am currently designing and developing a multi-protocol embedded sensor fusion node on an ESP32, integrating environmental, inertial, and GPS sensing across I2C, SPI, and UART interfaces. Architecture includes WiFi telemetry over MQTT and a FreeRTOS task-based firmware design, targeting real-world flight computer sensor stack patterns.
 
-##System Overview
+## System Overview
 
 **ESP32** Used for central processing, WiFi/BLE capable for telemetry, dual-core for FreeRTOS task partitioning
 
@@ -17,7 +17,10 @@ I am currently designing and developing a multi-protocol embedded sensor fusion 
 
 ## Status
 
--Commponent research and selection
-**-Compoenent testing on breadboard and testing proliminary embedded code.**
--Complete system intergation
--Create custom PCB using best practices.
+Phase 1: Component Selection & Research - **Completed**
+
+**Phase 2: Breadboard Bring-Up & Individual Driver Development**
+
+Phase 3 — Full System Integration
+
+Phase 4 — Custom PCB Design & Fabrication
