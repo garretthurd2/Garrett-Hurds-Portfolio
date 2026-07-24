@@ -1,4 +1,4 @@
-#APEX (Avionics Protocol Embedded eXperiment)
+# APEX (Avionics Protocol Embedded eXperiment)
 
 **In active Development**
 
@@ -15,7 +15,7 @@ I am currently designing and developing a multi-protocol embedded sensor fusion 
 **NEO-6M** GPS module communicated via UART
 
 
-##Status
+## Status
 
 -Commponent research and selection
 **-Compoenent testing on breadboard and testing proliminary embedded code.**
