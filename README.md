@@ -24,9 +24,9 @@ Four boards, one semester, full schematic-to-bring-up flow.
 → [More details](pcb-design-coursework/)
 
 ### Power Electronics & Photovoltaics
-DC-DC and DC-AC power conversion, LTSpice-validated.
+DC-DC and DC-AC power conversion, LTspice-validated.
 → [More details](power-electronics-lab/)
 
 ### VGA Display Controller
-FPGA Refresher to 
+640x480 @ 60 Hz in VHDL, simulation-verified on Artix-7
 → [More details](VGA-Display-Controller/)
