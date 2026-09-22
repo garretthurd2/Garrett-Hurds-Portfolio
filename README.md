@@ -26,3 +26,7 @@ Four boards, one semester, full schematic-to-bring-up flow.
 ### Power Electronics & Photovoltaics
 DC-DC and DC-AC power conversion, LTSpice-validated.
 → [More details](power-electronics-lab/)
+
+### VGA Display Controller
+FPGA Refresher to 
+→ [More details](VGA-Display-Controller/)
